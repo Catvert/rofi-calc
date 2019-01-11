@@ -158,7 +158,7 @@ static char* calc_get_display_value(const Mode* sw, unsigned int selected_line, 
     }
 
     if (selected_line == 0) {
-        return g_strdup("Add to history");
+        return g_strdup("Ajouter à l'historique");
     }
     unsigned int real_index = get_real_history_index(pd->history, selected_line);
     return g_strdup(g_ptr_array_index(pd->history, real_index));
@@ -224,7 +224,7 @@ static char *calc_get_message ( const Mode *sw )
     if (is_error_string(pd->last_result)) {
         return g_markup_printf_escaped("<span foreground='PaleVioletRed'>%s</span>", pd->last_result);
     }
-    return g_markup_printf_escaped("Result: <b>%s</b>", pd->last_result);
+    return g_markup_printf_escaped("Résultat: <b>%s</b>", pd->last_result);
 }
 
 Mode mode =
